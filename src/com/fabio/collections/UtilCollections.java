@@ -2,6 +2,7 @@ package com.fabio.collections;
 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +12,12 @@ public class UtilCollections {
 
   public static void main(String[] args) {
     
+    UtilCollections util = new UtilCollections();
     
+    //Usar LinkedHashMap para garantir a ordem de inclusão
+    Map<String, String> mapTipoFornec = new LinkedHashMap<String, String>(); 
+    
+    util.ordenarPorValor(mapTipoFornec);
 
   }
   
