@@ -9,25 +9,24 @@ public class Validacao {
   
   private boolean validarInclusao() {
     try {
+      Textbox txtbxCodigoFornecedor;
+      Textbox txtbxDescricao;
+      Textbox txtbxTelefone;
+      Textbox txtbxContato;
       //Todos os campos são obrigatórios no BD
       validarCampoTextbox(txtbxCodigoFornecedor);
       validarCampoTextbox(txtbxDescricao);
       validarCampoTextbox(txtbxTelefone);
       validarCampoTextbox(txtbxContato);
       
-      if(cmbTipo.getValue() == null || cmbTipo.getValue().equals("")){
-        Clients.wrongValue(cmbTipo, "Campo obrigatório");
-        cmbTipo.setFocus(true);
-        return false;
-      }
-    } catch (Excecao e) {
+    } catch (Exception e) {
       System.out.println(e.getMessage());
       return false;
     }
     return true;
   }
 
-  private void validarCampoTextbox(Textbox input) throws Excecao {
+  private void validarCampoTextbox(Textbox input) throws Exception {
     if(input.getValue() == null || input.getValue().equals("")){
       Clients.wrongValue(input, "Campo obrigatório");
       input.setFocus(true);
