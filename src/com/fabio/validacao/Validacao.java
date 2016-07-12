@@ -9,15 +9,15 @@ public class Validacao {
   
   private boolean validarInclusao() {
     try {
-      Textbox txtbxCodigoFornecedor;
-      Textbox txtbxDescricao;
-      Textbox txtbxTelefone;
-      Textbox txtbxContato;
+//      Textbox txtbxCodigoFornecedor;
+//      Textbox txtbxDescricao;
+//      Textbox txtbxTelefone;
+//      Textbox txtbxContato;
       //Todos os campos são obrigatórios no BD
-      validarCampoTextbox(txtbxCodigoFornecedor);
-      validarCampoTextbox(txtbxDescricao);
-      validarCampoTextbox(txtbxTelefone);
-      validarCampoTextbox(txtbxContato);
+//      validarCampoTextbox(txtbxCodigoFornecedor);
+//      validarCampoTextbox(txtbxDescricao);
+//      validarCampoTextbox(txtbxTelefone);
+//      validarCampoTextbox(txtbxContato);
       
     } catch (Exception e) {
       System.out.println(e.getMessage());
@@ -26,12 +26,12 @@ public class Validacao {
     return true;
   }
 
-  private void validarCampoTextbox(Textbox input) throws Exception {
-    if(input.getValue() == null || input.getValue().equals("")){
-      Clients.wrongValue(input, "Campo obrigatório");
-      input.setFocus(true);
-      throw new Excecao("PGT900: Erro de validação");
-    }
-  }
+//  private void validarCampoTextbox(Textbox input) throws Exception {
+//    if(input.getValue() == null || input.getValue().equals("")){
+//      Clients.wrongValue(input, "Campo obrigatório");
+//      input.setFocus(true);
+//      throw new Excecao("PGT900: Erro de validação");
+//    }
+//  }
 
 }
