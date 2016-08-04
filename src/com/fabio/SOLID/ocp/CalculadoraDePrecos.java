@@ -2,13 +2,17 @@ package com.fabio.SOLID.ocp;
 
 
 public class CalculadoraDePrecos {
+  private ServicoDeEntrega entrega;
+  private TabelaDePreco tabela;
+  
+  public CalculadoraDePrecos(ServicoDeEntrega entrega, TabelaDePreco tabela){
+    this.entrega = entraga;
+    this.tabela = tabela;
+  }
 
   public double calcula(Compra produto){
-    TabelaDePrecoPadrao tabela = new TabelaDePrecoPadrao();
-    Frete correios = new Frete();
-    
-    double desconto = tabela.decontoPara(produto.getValor());
-    double frete = correios.para(produto.getCidade());
+    double desconto = tabela.calcularDesconto(produto.getValor());
+    double frete = entrega.calcularFrete(produto.getCidade());
     
     return produto.getValor() * (1 - desconto) + frete;
   }
