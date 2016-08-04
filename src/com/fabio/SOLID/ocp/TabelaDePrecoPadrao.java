@@ -1,9 +1,10 @@
 package com.fabio.SOLID.ocp;
 
 
-public class TabelaDePrecoPadrao {
+public class TabelaDePrecoPadrao implements TabelaDePreco{
 
-  public double decontoPara(double valor){
+  @Override 
+  public double calcularDesconto(double valor){
     if(valor > 5000){
       return 0.03;
     }
