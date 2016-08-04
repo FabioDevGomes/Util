@@ -1,9 +1,9 @@
 package com.fabio.SOLID.ocp;
 
 
-public class Frete {
+public class FreteCorreios {
 
-  public double para(String cidade){
+  public double calcularFrete(String cidade){
     if("SAO PAULO".equals(cidade.toUpperCase())){
       return 15;
     }
